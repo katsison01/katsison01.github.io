@@ -4,178 +4,291 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ana Katrine Sison | QA Engineer</title>
-<meta name="description" content="QA engineer specializing in test automation with Playwright, PHPUnit and Postman. Based in the Philippines.">
+<meta name="description" content="QA engineer in the Philippines. Test automation, UAT and bug investigation for web platforms.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F6F7F5; --surface:#FFFFFF; --ink:#1C2321; --muted:#5C6763; --line:#DDE2DF;
-  --pass:#1E7F57; --pass-bg:#E3F2EA; --accent:#1C2321;
-  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#121614; --surface:#1A201E; --ink:#E8EDEA; --muted:#9AA6A1; --line:#2B3431;
-    --pass:#4CC38A; --pass-bg:#1B2E25; --accent:#E8EDEA;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#121614; --surface:#1A201E; --ink:#E8EDEA; --muted:#9AA6A1; --line:#2B3431;
-  --pass:#4CC38A; --pass-bg:#1B2E25; --accent:#E8EDEA;
-}
+:root{--bg:#F4F5F1;--ink:#14261F;--muted:#5D6B64;--line:#C9D1CA;--accent:#2E6B4F;--bandbg:#1D4A38;--bandink:#EEF3EE;--f:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1613;--ink:#E7EDE8;--muted:#92A199;--line:#27342D;--accent:#6CC499;--bandbg:#17372B;--bandink:#E7EDE8}}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--pass);outline-offset:3px;border-radius:4px}
-.wrap{max-width:860px;margin:0 auto;padding:0 24px}
-header.nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
-.nav .name{font-weight:600;text-decoration:none}
-.nav nav{display:flex;gap:24px;font-size:15px}
-.nav nav a{color:var(--muted);text-decoration:none}
-.nav nav a:hover{color:var(--ink)}
-.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
-h1{font-size:clamp(34px,5.2vw,52px);line-height:1.08;letter-spacing:-0.02em;font-weight:600}
-.hero p.lead{margin-top:20px;color:var(--muted);max-width:44ch}
-.cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line)}
-.btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.btn:hover{transform:translateY(-1px)}
-.run{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;font-family:var(--mono);font-size:13px;line-height:1.9}
-.run .head{display:flex;justify-content:space-between;color:var(--muted);padding-bottom:12px;margin-bottom:8px;border-bottom:1px solid var(--line)}
-.run .row{display:flex;gap:10px;align-items:baseline}
-.run .ok{color:var(--pass);font-weight:500}
-.run .sum{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--pass);font-weight:500}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:24px;letter-spacing:-0.01em;font-weight:600;margin-bottom:24px}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.skills h3{font-size:15px;font-weight:600;margin-bottom:8px}
-.skills p{color:var(--muted);font-size:15px}
-.case{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
-.case:first-of-type{border-top:0;padding-top:0}
-.case h3{font-size:17px;font-weight:600}
-.case .tag{color:var(--muted);font-size:14px;margin-top:4px}
-.case dl{display:grid;gap:10px}
-.case dt{font-weight:600;font-size:14px}
-.case dd{color:var(--muted);font-size:15px}
-.job{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:0}
-.job span:last-child{color:var(--muted);font-size:15px;text-align:right}
-.contact p{color:var(--muted);max-width:50ch;margin-bottom:20px}
-.links{display:flex;gap:12px;flex-wrap:wrap}
-footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-@media (max-width:720px){
-  .hero{grid-template-columns:1fr;padding-top:40px;gap:32px}
-  .skills{grid-template-columns:1fr;gap:20px}
-  .case{grid-template-columns:1fr;gap:12px}
-  .nav nav{gap:16px}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.top{display:flex;justify-content:space-between;padding:22px 0;font-size:15px}
+.top nav{display:flex;gap:24px}
+.top a{text-decoration:none}
+.top nav a{color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.hero{position:relative;isolation:isolate;display:flex;gap:48px;align-items:flex-end;justify-content:space-between;padding:7vh 0 64px}
+.name{position:relative;font-weight:700;font-size:clamp(44px,8vw,104px);line-height:.92;letter-spacing:-.045em}
+.name .l{display:block;overflow:hidden;padding-bottom:.06em}
+.name .l span{display:block}
+.name .l i{font-style:normal;display:inline-block;transform:translateY(110%) rotate(6deg);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*45ms + .1s)}
+@keyframes up{to{transform:none}}
+.portrait{flex:0 0 220px}
+.portrait img{display:block;width:220px;height:280px;object-fit:cover;filter:grayscale(.15)}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:0 0 88px}
+.role{font-size:clamp(22px,2.6vw,30px);line-height:1.25;letter-spacing:-.015em;font-weight:500;max-width:22ch}
+.intro p{color:var(--muted);max-width:46ch}
+.status{display:flex;align-items:center;gap:10px;margin-top:20px;font-size:15px;color:var(--ink)}
+.status::before{content:"";width:8px;height:8px;background:var(--accent)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sec{display:grid;grid-template-columns:200px 1fr;gap:48px}
+h2{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0}
+.prose p+p{margin-top:16px}
+.prose p{max-width:60ch}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:36px 48px}
+.how h3{font-size:18px;font-weight:600;margin-bottom:4px}
+.how p{color:var(--muted);font-size:16px}
+details.case{border-top:1px solid var(--line)}
+details.case:first-of-type{border-top:0}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto 28px;gap:16px;align-items:baseline;padding:22px 0}
+summary::-webkit-details-marker{display:none}
+summary .t{font-size:clamp(22px,2.8vw,32px);font-weight:600;letter-spacing:-.02em;line-height:1.15}
+summary .k{color:var(--muted);font-size:15px}
+summary::after{content:"+";font-size:26px;line-height:1;text-align:right;transition:transform .25s;color:var(--muted)}
+details[open] summary::after{transform:rotate(45deg)}
+summary:hover .t{color:var(--accent)}
+.body{display:flex;gap:32px;flex-wrap:wrap;padding:0 0 32px}
+.txt{flex:1 1 340px;max-width:560px}
+.txt dt{font-size:14px;color:var(--muted);margin-top:14px}
+.txt dt:first-child{margin-top:0}
+.txt dd{font-size:17px}
+.body figure{flex:0 1 380px;margin:0}
+.shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);cursor:zoom-in}
+figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.list{display:grid;grid-template-columns:140px 1fr;gap:10px 24px}
+.list dt{color:var(--muted);font-size:16px}
+.list dd{font-size:18px}
+.job{display:flex;justify-content:space-between;gap:24px;padding:14px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.job span:last-child{color:var(--muted);font-size:16px;text-align:right}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gal figure{margin:0}
+.mail{display:inline-block;font-size:clamp(26px,4.4vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1.1;margin-bottom:24px;word-break:break-all}
+.links{display:flex;gap:24px;flex-wrap:wrap;font-size:17px}
+footer{padding:40px 0 56px;font-size:14px;color:var(--muted);border-top:1px solid var(--line)}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(8,14,11,.9);display:none;place-items:center;padding:24px;cursor:zoom-out}
+#lb.on{display:grid}#lb img{max-width:100%;max-height:100%}
+.intro{animation:fade .9s 1s both}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.status::before{animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.top nav a,.links a{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s,color .2s;padding-bottom:2px}
+.top nav a:hover,.links a:hover{background-size:100% 1px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+details[open] .body{animation:drop .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.shot{transition:transform .4s,filter .3s}.shot:hover{transform:scale(1.02);filter:brightness(1.04)}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:60}
+.hero::before{content:"";position:absolute;inset:0 -28px;z-index:-2;background-image:radial-gradient(var(--line) 1.3px,transparent 1.4px);background-size:24px 24px;-webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent);mask-image:linear-gradient(to bottom,#000 30%,transparent)}
+.vf{position:absolute;right:-20px;top:50%;width:clamp(240px,34vw,440px);margin-top:calc(clamp(240px,34vw,440px)/-2);z-index:-1;color:var(--accent);transition:transform .25s ease-out;pointer-events:none}
+.vf .ring{transform-box:fill-box;transform-origin:center;animation:spin 60s linear infinite}
+.vf .ring2{transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vf .sweep{transform-box:fill-box;transform-origin:center;animation:spin 6s linear infinite}
+.mq{width:100vw;margin-left:calc(50% - 50vw);border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0}
+.mq div{display:inline-block;animation:mq 36s linear infinite}
+.mq:hover div{animation-play-state:paused}
+.mq span{font-size:clamp(20px,2.4vw,28px);font-weight:600;letter-spacing:-.02em}
+.mq span::after{content:"";display:inline-block;width:8px;height:8px;background:var(--accent);margin:0 40px 2px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.band{background:var(--bandbg);color:var(--bandink);box-shadow:0 0 0 100vmax var(--bandbg);clip-path:inset(0 -100vmax);border-top-color:transparent;margin-top:-1px}
+.band h2,.band .how p{color:var(--bandink);opacity:.72}
+.band h2::before{background:var(--bandink)}
+h2::before{content:"";display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:10px}
+@media (max-width:760px){
+.vf{opacity:.22;right:-60px;top:30%;margin-top:0}
+.hero{flex-direction:column;align-items:flex-start;gap:28px;padding:40px 0 40px}
+.portrait{flex:none}
+.intro,.sec,.how,.gal{grid-template-columns:1fr;gap:24px}
+.intro{padding-bottom:56px}
+.list{grid-template-columns:1fr;gap:2px 0}.list dd{margin-bottom:12px}
+summary{grid-template-columns:1fr 28px}summary .k{display:none}
+.top nav{gap:16px}}
+@media (prefers-reduced-motion:reduce){.name .l i{animation:none;transform:none}.intro,.status::before,details[open] .body{animation:none}.rv{opacity:1;transform:none;transition:none}.vf *,.mq div{animation:none!important}.mq{overflow-x:auto}#bar{display:none}html{scroll-behavior:auto}summary::after{transition:none}}
 </style>
 </head>
 <body>
+<div id="bar" aria-hidden="true"></div>
 <div class="wrap">
-  <header class="nav">
-    <a class="name" href="#top">Ana Katrine Sison</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="top">
+    <a href="#top">Ana Katrine Sison</a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </header>
 
   <main id="top">
     <div class="hero">
+      <svg class="vf" id="vf" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <g class="ring"><circle cx="200" cy="200" r="176" stroke-dasharray="2 9"/><path d="M200 16v14M200 370v14M16 200h14M370 200h14" stroke-width="2.5"/></g>
+      <g class="ring2"><circle cx="200" cy="200" r="128" stroke-dasharray="26 8"/></g>
+      <circle cx="200" cy="200" r="82"/>
+      <path d="M200 84v78M200 238v78M84 200h78M238 200h78"/>
+      <circle cx="200" cy="200" r="5" fill="currentColor" stroke="none"/>
+      <path class="sweep" d="M200 200V120" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M40 76V40h36M324 40h36v36M360 324v36h-36M76 360H40v-36" stroke-width="3"/>
+    </svg>
+    <h1 class="name"><span class="l"><span>Ana Katrine</span></span><span class="l"><span>Sison</span></span></h1>
+      <figure class="portrait" hidden style="position:relative"><img src="photo.jpg" alt="Portrait of Ana Katrine Sison" onload="this.parentNode.hidden=false" onerror="this.parentNode.remove()"></figure>
+    </div>
+
+    <div class="intro">
+      <p class="role">QA engineer in the Philippines.</p>
       <div>
-        <h1>QA engineer who automates the repeatable and investigates the odd.</h1>
-        <p class="lead">I build Playwright test suites, run structured UAT, and trace bugs to their root cause. I also write Laravel and TypeScript, so I know what is behind the screen I am testing.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn" href="#work">See my work</a>
-        </div>
-      </div>
-      <div class="run" role="img" aria-label="Sample test run output showing all checks passing">
-        <div class="head"><span>playwright test</span><span>all passed</span></div>
-        <div class="row"><span class="ok">pass</span><span>candidate import validation</span></div>
-        <div class="row"><span class="ok">pass</span><span>sign-up and invitation links</span></div>
-        <div class="row"><span class="ok">pass</span><span>session handling</span></div>
-        <div class="row"><span class="ok">pass</span><span>multi-page assessments</span></div>
-        <div class="row"><span class="ok">pass</span><span>blank-response regression</span></div>
-        <div class="sum">5 passed</div>
+        <p>I test web platforms where the results have to be right: candidate imports, sign-ups, sessions and assessments. I automate the repeatable checks with Playwright and write up everything else so a developer can act on it straight away.</p>
+        <div class="status">Open to QA and test automation roles</div>
       </div>
     </div>
 
+    <div class="mq" aria-hidden="true"><div><span>Playwright</span><span>PHPUnit</span><span>Postman</span><span>Laravel</span><span>TypeScript</span><span>Vue</span><span>AngularJS</span><span>Next.js</span><span>UAT</span><span>API testing</span><span>Regression testing</span><span>Bug reporting</span><span>Playwright</span><span>PHPUnit</span><span>Postman</span><span>Laravel</span><span>TypeScript</span><span>Vue</span><span>AngularJS</span><span>Next.js</span><span>UAT</span><span>API testing</span><span>Regression testing</span><span>Bug reporting</span></div></div>
+
     <section id="work">
-      <h2>Selected work</h2>
-      <p style="color:var(--muted);margin:-12px 0 28px;font-size:15px">Client details are generalized to keep them confidential.</p>
-
-      <article class="case">
+      <div class="sec">
+        <h2>Selected work</h2>
         <div>
-          <h3>Playwright suite for assessment platforms</h3>
-          <p class="tag">Test automation</p>
+          <details class="case" open>
+            <summary><span class="t">Test suite for assessment platforms</span><span class="k">Test automation</span></summary>
+            <div class="body">
+              <dl class="txt">
+                <dt>Problem</dt><dd>Candidate flows were checked by hand, which was slow and hard to repeat.</dd>
+                <dt>What I did</dt><dd>Built a Playwright suite with a command-line test runner, added support for multi-page assessments, and fixed the timing and selector problems that made tests flaky.</dd>
+                <dt>Tools</dt><dd>Playwright, TypeScript</dd>
+              </dl>
+              <figure><img class="shot" src="work-1.png" alt="Playwright test results" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Test run</figcaption></figure>
+            </div>
+          </details>
+          <details class="case">
+            <summary><span class="t">The blank-response bug</span><span class="k">Root-cause analysis</span></summary>
+            <div class="body">
+              <dl class="txt">
+                <dt>Problem</dt><dd>Candidates were seeing blank responses on one platform.</dd>
+                <dt>What I did</dt><dd>Reproduced the issue and traced it to an admin reset action, so the fix addressed the cause instead of the symptom.</dd>
+              </dl>
+              <figure><img class="shot" src="work-2.png" alt="Bug investigation notes" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Investigation</figcaption></figure>
+            </div>
+          </details>
+          <details class="case">
+            <summary><span class="t">User acceptance testing</span><span class="k">UAT and defect reporting</span></summary>
+            <div class="body">
+              <dl class="txt">
+                <dt>Scope</dt><dd>Candidate import validation, sign-up flows, invitation link enforcement, session handling and data discrepancies.</dd>
+                <dt>Output</dt><dd>Structured bug reports with steps to reproduce, expected and actual results, and severity.</dd>
+              </dl>
+              <figure><img class="shot" src="work-3.png" alt="UAT bug report" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Bug report</figcaption></figure>
+            </div>
+          </details>
+          <p style="color:var(--muted);font-size:14px;margin-top:20px">Client details are left out to keep them confidential.</p>
         </div>
-        <dl>
-          <div><dt>Problem</dt><dd>Candidate flows on web assessment platforms were checked by hand, which was slow and hard to repeat.</dd></div>
-          <div><dt>What I did</dt><dd>Built a Playwright suite with a CLI test runner and arrow-key navigation, and added handling for multi-page assessments. Fixed timing and selector issues to keep tests stable.</dd></div>
-          <div><dt>Tools</dt><dd>Playwright, TypeScript</dd></div>
-        </dl>
-      </article>
+      </div>
+    </section>
 
-      <article class="case">
-        <div>
-          <h3>Blank-response bug</h3>
-          <p class="tag">Root-cause analysis</p>
+    <section id="proof" hidden>
+      <div class="sec">
+        <h2>Proof of work</h2>
+        <div class="gal">
+          <figure><img class="shot" src="proof-1.png" alt="Test report" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Test report</figcaption></figure>
+          <figure><img class="shot" src="proof-2.png" alt="Bug report" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Bug report</figcaption></figure>
+          <figure><img class="shot" src="proof-3.png" alt="Certificate or workspace" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Certificate</figcaption></figure>
         </div>
-        <dl>
-          <div><dt>Problem</dt><dd>Candidates were seeing blank responses on one assessment platform.</dd></div>
-          <div><dt>What I did</dt><dd>Reproduced the issue and traced it to an admin reset action that triggered the blank responses on the candidate side, so the fix targeted the cause rather than the symptom.</dd></div>
-        </dl>
-      </article>
+      </div>
+    </section>
 
-      <article class="case">
-        <div>
-          <h3>User acceptance testing</h3>
-          <p class="tag">UAT and defect reporting</p>
+    <section id="about">
+      <div class="sec">
+        <h2>About</h2>
+        <div class="prose">
+          <p>I started as a developer and moved into quality because I like working out how software fails. Knowing the code means I can read what I am testing, talk to developers in their terms, and write tests that stay stable.</p>
+          <p>I have two years of hands-on test automation, mostly on web assessment platforms.</p>
         </div>
-        <dl>
-          <div><dt>Scope</dt><dd>Candidate import validation, sign-up flows, email invitation link enforcement, session handling, and dropdown data discrepancies.</dd></div>
-          <div><dt>Output</dt><dd>Structured bug reports with steps to reproduce, expected and actual results, and severity, written for developers and product owners.</dd></div>
-        </dl>
-      </article>
+      </div>
+    </section>
+
+    <section id="how" class="band">
+      <div class="sec">
+        <h2>How I test</h2>
+        <div class="how">
+          <div><h3>Risk first</h3><p>Money, personal data and flows people cannot work around get tested before anything else.</p></div>
+          <div><h3>Automate what repeats</h3><p>Stable checks go into Playwright and PHPUnit. Exploratory testing stays manual, where a person notices more.</p></div>
+          <div><h3>Find the cause</h3><p>I want to know why something broke, so the fix stops the next bug too.</p></div>
+          <div><h3>Write usable reports</h3><p>Steps to reproduce, expected and actual results, and severity, every time.</p></div>
+        </div>
+      </div>
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div><h3>Testing</h3><p>Test automation, UAT, API testing, regression testing, exploratory testing, bug reporting</p></div>
-        <div><h3>Tools</h3><p>Playwright, PHPUnit, Postman, Git, Trello</p></div>
-        <div><h3>Development</h3><p>Laravel, PHP, TypeScript, Vue, AngularJS, Next.js</p></div>
+      <div class="sec">
+        <h2>Toolbox</h2>
+        <dl class="list">
+          <dt>Testing</dt><dd>Test automation, UAT, API testing, regression and exploratory testing, bug reporting</dd>
+          <dt>Tools</dt><dd>Playwright, PHPUnit, Postman, Git, Trello</dd>
+          <dt>Development</dt><dd>Laravel, PHP, TypeScript, Vue, AngularJS, Next.js</dd>
+        </dl>
       </div>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
-      <div class="job"><span>QA Developer, People Dynamics, Inc.</span><span>Current</span></div>
-      <div class="job"><span>Junior Full-Stack Developer, QX Information Technology Corp.</span><span></span></div>
-      <div class="job"><span>Junior Software Developer, Wilcon Depot</span><span></span></div>
-      <div class="job"><span>BS Information Technology, Technological Institute of the Philippines</span><span>President's Lister (3x)</span></div>
+      <div class="sec">
+        <h2>Experience</h2>
+        <div>
+          <div class="job"><span>QA Developer, People Dynamics, Inc.</span><span>Current</span></div>
+          <div class="job"><span>Junior Full-Stack Developer, QX Information Technology Corp.</span><span></span></div>
+          <div class="job"><span>Junior Software Developer, Wilcon Depot</span><span></span></div>
+          <div class="job"><span>BS Information Technology, Technological Institute of the Philippines</span><span>President’s Lister (3x)</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>I am open to QA and test automation roles. The best way to reach me is by email.</p>
-      <div class="links">
-        <a class="btn primary" href="mailto:akatrinesison@gmail.com">Email me</a>
-        <a class="btn" href="https://www.linkedin.com/in/rinesison01" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="https://github.com/katsison01" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="Sison_Ana_Katrine_Resume.pdf" download>Download CV</a>
+    <section id="contact">
+      <div class="sec">
+        <h2>Contact</h2>
+        <div>
+          <a class="mail" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/katsison01" target="_blank" rel="noopener">GitHub</a>
+            <a href="YOUR-CV.pdf" download>Download CV</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>Ana Katrine Sison. San Jose del Monte, Bulacan, Philippines.</footer>
 </div>
+
+<div id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    [].forEach.call(document.querySelectorAll('.name .l span'),function(el,k){
+      var t=el.textContent,n=k*12;el.textContent='';
+      for(var c=0;c<t.length;c++){var i=document.createElement('i');i.style.setProperty('--i',n+c);i.innerHTML=t[c]===' '?'&nbsp;':t[c];el.appendChild(i)}
+      el.setAttribute('aria-label',t);
+    });
+    var items=document.querySelectorAll('.sec>h2,.sec>div,.sec>dl,details.case,.how>div,.job');
+    [].forEach.call(items,function(el,k){el.classList.add('rv');el.style.setProperty('--d',((k%4)*0.08)+'s')});
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+      [].forEach.call(items,function(el){io.observe(el)});
+    }else{[].forEach.call(items,function(el){el.classList.add('in')})}
+    var bar=document.getElementById('bar');
+    addEventListener('scroll',function(){var h=document.documentElement;bar.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'},{passive:true});
+  }
+  var vf=document.getElementById('vf');
+  if(vf&&!reduce){addEventListener('mousemove',function(e){var x=(e.clientX/innerWidth-.5)*28,y=(e.clientY/innerHeight-.5)*28;vf.style.transform='translate('+x+'px,'+y+'px)'})}
+  var lb=document.getElementById('lb'),lbi=lb.querySelector('img'),proof=document.getElementById('proof');
+  document.addEventListener('click',function(e){var t=e.target;
+    if(t.classList&&t.classList.contains('shot')){lbi.src=t.src;lbi.alt=t.alt;lb.classList.add('on')}
+    else if(lb.classList.contains('on')){lb.classList.remove('on')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+  [].forEach.call(proof.querySelectorAll('img'),function(im){im.addEventListener('load',function(){proof.hidden=false})});
+})();
+</script>
 </body>
 </html>
